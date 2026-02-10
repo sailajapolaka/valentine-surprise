@@ -1,12 +1,8 @@
-const noBtn = document.getElementById("no");
-const yesBtn = document.getElementById("yes");
+const btn = document.getElementById("hugBtn");
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
 
-noBtn.addEventListener("mouseenter", () => {
-  const x = Math.random() * 300 - 150;
-  const y = Math.random() * 200 - 100;
-  noBtn.style.transform = `translate(${x}px, ${y}px)`;
-});
-
-yesBtn.addEventListener("click", () => {
-  window.location.href = "heart.html";
+btn.addEventListener("click", () => {
+  left.style.transform = "translateX(80px)";
+  right.style.transform = "translateX(-80px)";
 });
