@@ -2,38 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Valentine Surprise 💖</title>
+  <title>Valentine Surprise ❤️</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1 id="question">Will you be my Valentine? 💘</h1>
+<!-- PAGE 1 -->
+<div id="page1" class="page">
+  <h1>Do you love me? 💕</h1>
+  <button id="yesBtn">YES ❤️</button>
+  <button id="noBtn">NO 😜</button>
+</div>
 
-  <div class="teddy-container">
-    <img src="./assets/teddy1.png" class="teddy left">
-    <img src="./assets/teddy2.png" class="teddy right">
+<!-- PAGE 2 -->
+<div id="page2" class="page hidden">
+  <div id="battery">
+    <div id="battery-level"></div>
   </div>
+  <p>Charging love... 💖</p>
+</div>
 
-  <div class="buttons">
-    <button id="yesBtn">Yes 💖</button>
-    <button id="noBtn">No 🙈</button>
+<!-- PAGE 3 -->
+<div id="page3" class="page hidden">
+  <div class="teddy-box">
+    <img src="./assets/teddy1.png.png" class="teddy left">
+    <img src="./assets/teddy2.png.png" class="teddy right">
   </div>
+  <h1>Happy Valentine’s Day ❤️</h1>
+  <div class="hearts">💖 💕 💗 💓 💞</div>
+</div>
 
-  <!-- Battery Section -->
-  <div id="batterySection" class="hidden">
-    <div class="battery">
-      <div class="battery-level" id="batteryLevel"></div>
-    </div>
-    <p>Hold my heart 💓</p>
-  </div>
-
-  <!-- Final Message -->
-  <div id="finalMessage" class="hidden">
-    <h2>Happy Valentine’s Day ❤️</h2>
-    <div class="hearts"></div>
-  </div>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
