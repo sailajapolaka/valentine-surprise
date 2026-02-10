@@ -2,19 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Valentine’s Day</title>
+  <title>Valentine Surprise 💖</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Happy Valentine’s Day 💖</h1>
+  <h1 id="question">Will you be my Valentine? 💘</h1>
 
   <div class="teddy-container">
     <img src="./assets/teddy1.png" class="teddy left">
     <img src="./assets/teddy2.png" class="teddy right">
   </div>
 
-  <button id="hugBtn">Make Them Hug 🤗</button>
+  <div class="buttons">
+    <button id="yesBtn">Yes 💖</button>
+    <button id="noBtn">No 🙈</button>
+  </div>
+
+  <!-- Battery Section -->
+  <div id="batterySection" class="hidden">
+    <div class="battery">
+      <div class="battery-level" id="batteryLevel"></div>
+    </div>
+    <p>Hold my heart 💓</p>
+  </div>
+
+  <!-- Final Message -->
+  <div id="finalMessage" class="hidden">
+    <h2>Happy Valentine’s Day ❤️</h2>
+    <div class="hearts"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>
