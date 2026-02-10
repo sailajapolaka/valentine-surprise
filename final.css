@@ -1,0 +1,52 @@
+body {
+  background: linear-gradient(135deg, #ffd6e0, #ffeaf0);
+  height: 100vh;
+  margin: 0;
+  font-family: Georgia;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.hug-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.teddy {
+  width: 130px;
+  position: absolute;
+  top: 40px;
+}
+
+/* starting positions */
+.left {
+  left: -150px;
+  animation: hugLeft 2s ease forwards;
+}
+
+.right {
+  right: -150px;
+  animation: hugRight 2s ease forwards;
+}
+
+/* hug animation */
+@keyframes hugLeft {
+  to {
+    left: 35px;
+  }
+}
+
+@keyframes hugRight {
+  to {
+    right: 35px;
+  }
+}
