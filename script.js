@@ -1,31 +1,35 @@
-// PAGE 1 BUTTONS
+const page1 = document.getElementById("page1");
+const page2 = document.getElementById("page2");
+const page3 = document.getElementById("page3");
+
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
+const batteryLevel = document.getElementById("battery-level");
 
+/* SAFETY HIDE */
+page2.classList.add("hidden");
+page3.classList.add("hidden");
+
+/* NO BUTTON RUNS */
 noBtn.addEventListener("mouseover", () => {
-  noBtn.style.top = Math.random() * 80 + "%";
-  noBtn.style.left = Math.random() * 80 + "%";
+  noBtn.style.left = Math.random() * 70 + "%";
+  noBtn.style.top = Math.random() * 70 + "%";
 });
 
+/* YES CLICK */
 yesBtn.addEventListener("click", () => {
-  document.getElementById("page1").classList.add("hidden");
-  document.getElementById("page2").classList.remove("hidden");
-  startBattery();
-});
+  page1.classList.add("hidden");
+  page2.classList.remove("hidden");
 
-// BATTERY LOGIC
-function startBattery() {
   let level = 0;
-  const battery = document.getElementById("battery-level");
-
   const interval = setInterval(() => {
     level += 5;
-    battery.style.width = level + "%";
+    batteryLevel.style.width = level + "%";
 
     if (level >= 100) {
       clearInterval(interval);
-      document.getElementById("page2").classList.add("hidden");
-      document.getElementById("page3").classList.remove("hidden");
+      page2.classList.add("hidden");
+      page3.classList.remove("hidden");
     }
   }, 150);
-}
+});
